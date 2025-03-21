@@ -1,28 +1,25 @@
-<!-- PAGE 1: Suspicious Email in Inbox -->
-<!-- Save this as phishing-page-1.html -->
+<!-- PAGE 1: Professional Email Inbox with Suspicious Message -->
+<!-- Save as phishing-page-1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inbox - Acme Corp Mail</title>
+  <title>Inbox - Acme Mail</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f5f7fa; }
     header {
-      background: #004085;
+      background: #1e2a38;
       color: #fff;
-      padding: 12px 24px;
-      font-size: 20px;
-    }
-    .container {
+      padding: 14px 28px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
     }
+    .container { display: flex; height: calc(100vh - 52px); }
     .sidebar {
-      width: 200px;
+      width: 220px;
       background: #fff;
       border-right: 1px solid #ccc;
       padding: 20px;
@@ -30,40 +27,44 @@
     .content {
       flex: 1;
       padding: 20px;
+      overflow-y: auto;
     }
     .email {
       background: #fff;
-      padding: 12px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
       cursor: pointer;
+      transition: background 0.2s ease;
     }
-    .email:hover {
-      background: #e8f0fe;
-    }
-    .phishing {
-      font-weight: bold;
-      color: red;
-    }
+    .email:hover { background: #eaf3ff; }
+    .phishing { color: red; font-weight: bold; }
+    .label { background: #ffd700; color: #111; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px; }
   </style>
 </head>
 <body>
-  <header>Acme Corp Webmail</header>
+  <header>
+    <div>📧 Acme Corp Mail</div>
+    <div>Welcome, John Doe</div>
+  </header>
   <div class="container">
     <div class="sidebar">
-      <p><strong>Inbox</strong></p>
-      <p>Sent</p>
-      <p>Trash</p>
+      <h4>Folders</h4>
+      <p><strong>📥 Inbox</strong></p>
+      <p>📤 Sent</p>
+      <p>🗑️ Trash</p>
     </div>
     <div class="content">
       <div class="email">
-        <p><strong class="phishing">[Suspicious]</strong> Urgent: Update Your Payroll Info</p>
+        <p><strong>Urgent: Update Your Payroll Info</strong> <span class="label phishing">[Phishing]</span></p>
         <p>From: HR Department &lt;hr-dept@payr0ll-secure.com&gt;</p>
         <p>Received: Today, 9:13 AM</p>
       </div>
       <div class="email">
-        <p>Quarterly Report Now Available</p>
+        <p><strong>Quarterly Report Available</strong></p>
         <p>From: finance@acme.com</p>
+        <p>Received: Today, 8:30 AM</p>
       </div>
     </div>
   </div>
