@@ -1,0 +1,83 @@
+<!-- PAGE 1: Email Inbox with AI Warning Banner -->
+<!-- Save as ai-phishing-page-1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inbox - Acme Mail (Protected)</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f5f7fa; }
+    header {
+      background: #1e2a38;
+      color: #fff;
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+    .ai-alert {
+      background: #fff3cd;
+      color: #856404;
+      padding: 12px 24px;
+      border-bottom: 1px solid #ffeeba;
+      font-size: 15px;
+    }
+    .container { display: flex; height: calc(100vh - 96px); }
+    .sidebar {
+      width: 220px;
+      background: #fff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .email {
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .email:hover { background: #eaf3ff; }
+    .phishing { color: red; font-weight: bold; }
+    .label { background: #ffd700; color: #111; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-left: 8px; }
+  </style>
+</head>
+<body onload="setTimeout(() => window.location.href='ai-phishing-page-2.html', 5000)">
+<body>
+  <header>
+    <div>📧 Acme Corp Mail</div>
+    <div>Welcome, John Doe</div>
+  </header>
+  <div class="ai-alert">
+    🤖 <strong>AI Security Agent:</strong> We detected a potentially harmful email. Please do not click on suspicious links. Learn how to spot phishing attempts below.
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <h4>Folders</h4>
+      <p><strong>📥 Inbox</strong></p>
+      <p>📤 Sent</p>
+      <p>🗑️ Trash</p>
+    </div>
+    <div class="content">
+      <div class="email">
+        <p><strong>Urgent: Update Your Payroll Info</strong> <span class="label phishing">[Blocked]</span></p>
+        <p>From: HR Department &lt;hr-dept@payr0ll-secure.com&gt;</p>
+        <p>Status: <strong>Email quarantined by AI Security Agent</strong></p>
+      </div>
+      <div class="email">
+        <p><strong>Quarterly Report Available</strong></p>
+        <p>From: finance@acme.com</p>
+        <p>Received: Today, 8:30 AM</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
