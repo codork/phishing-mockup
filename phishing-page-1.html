@@ -1,0 +1,71 @@
+<!-- PAGE 1: Suspicious Email in Inbox -->
+<!-- Save this as phishing-page-1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inbox - Acme Corp Mail</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #004085;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 20px;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+      background: #fff;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .email {
+      background: #fff;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .email:hover {
+      background: #e8f0fe;
+    }
+    .phishing {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <header>Acme Corp Webmail</header>
+  <div class="container">
+    <div class="sidebar">
+      <p><strong>Inbox</strong></p>
+      <p>Sent</p>
+      <p>Trash</p>
+    </div>
+    <div class="content">
+      <div class="email">
+        <p><strong class="phishing">[Suspicious]</strong> Urgent: Update Your Payroll Info</p>
+        <p>From: HR Department &lt;hr-dept@payr0ll-secure.com&gt;</p>
+        <p>Received: Today, 9:13 AM</p>
+      </div>
+      <div class="email">
+        <p>Quarterly Report Now Available</p>
+        <p>From: finance@acme.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
